@@ -6,8 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3002,
-    // Required for React Router — serve index.html for all unmatched routes
-    historyApiFallback: true,
     proxy: {
       '/api': {
         target: 'http://localhost:5000',

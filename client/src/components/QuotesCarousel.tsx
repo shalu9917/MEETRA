@@ -78,7 +78,6 @@ const MEETRA_QUOTES: QuoteItem[] = [
     id: 10,
     text: "Eliminate the unnecessary meeting and you double the productivity. Keep the ones that decide.",
     author: "Jeff Bezos (adapted)",
-    author2: "Jeff Bezos",
     role: "Amazon Founder",
     category: "FOCUS",
     context: "Focus & Efficiency"

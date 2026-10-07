@@ -29,7 +29,6 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   onJoinClick,
   userName: _userName
 }) => {
-  const userName = _userName;
   const [recentMeetings, setRecentMeetings] = useState<any[]>([]);
   const [quickCode, setQuickCode] = useState('');
   const [quickCodeError, setQuickCodeError] = useState('');

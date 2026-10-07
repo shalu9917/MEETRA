@@ -50,7 +50,7 @@ export const SignupPage: React.FC = () => {
     if (password !== confirmPassword) { setError('Passwords do not match.'); return; }
 
     setLoading(true);
-    const { user, error: authError } = await signUp(email.trim(), password, fullName.trim());
+    const { error: authError } = (await signUp(email.trim(), password, fullName.trim())) as any;
     setLoading(false);
 
     if (authError) {
@@ -62,13 +62,7 @@ export const SignupPage: React.FC = () => {
       return;
     }
 
-    // If email verification is required, user won't have a session yet
-    if (user && !user.email_confirmed_at) {
-      setSuccessMessage(`Account created! We've sent a verification email to ${email}. Please check your inbox to activate your account.`);
-    } else {
-      // Auto-confirmed (e.g., dev mode) — go straight to dashboard
-      navigate('/', { replace: true });
-    }
+    setSuccessMessage(`Account created! We've sent a verification email to ${email}. Please check your inbox to activate your account.`);
   };
 
   const handleGoogleSignup = async () => {
