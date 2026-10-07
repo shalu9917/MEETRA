@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock, User, Video, AlertCircle, Loader2, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useAuth } from '../auth/AuthProvider';
 
 export const SignupPage: React.FC = () => {
   const { signUp, signInWithGoogle } = useAuth();
-  const navigate = useNavigate();
 
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
