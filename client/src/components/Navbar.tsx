@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onGoHome, activeMeetingCode }) =
   };
 
   return (
-    <header style={{
+    <header className="navbar-container" style={{
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       padding: '14px 32px', borderBottom: '1px solid rgba(255,255,255,0.09)',
       background: 'rgba(8,10,18,0.88)', backdropFilter: 'blur(20px)',
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onGoHome, activeMeetingCode }) =
               fontWeight: '700', border: '1px solid rgba(99,102,241,0.35)', letterSpacing: '0.04em'
             }}>PHASE 1</span>
           </div>
-          <p style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.04em' }}>
+          <p className="hide-on-mobile" style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.04em' }}>
             Meet. Decide. Act. Track.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onGoHome, activeMeetingCode }) =
       {/* Right Controls */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
         {/* Date & Time */}
-        <div style={{
+        <div className="hide-on-mobile" style={{
           display: 'flex', alignItems: 'center', gap: '10px',
           background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-subtle)',
           padding: '6px 14px', borderRadius: 'var(--radius-full)', fontSize: '13px'
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onGoHome, activeMeetingCode }) =
         </div>
 
         {/* P2P Badge */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-muted)', fontSize: '12px', fontWeight: '500' }}>
+        <div className="hide-on-mobile" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-muted)', fontSize: '12px', fontWeight: '500' }}>
           <ShieldCheck size={16} color="#10b981" />
           <span style={{ color: 'var(--text-secondary)' }}>Encrypted P2P</span>
         </div>
@@ -195,7 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onGoHome, activeMeetingCode }) =
                 {/* Menu items */}
                 <div style={{ padding: '6px' }}>
                   <button
-                    onClick={() => { setMenuOpen(false); }}
+                    onClick={() => { setMenuOpen(false); alert('Profile settings will be available in Phase 2.'); }}
                     style={{
                       width: '100%', padding: '9px 12px', borderRadius: '8px',
                       background: 'none', color: 'var(--text-secondary)',
