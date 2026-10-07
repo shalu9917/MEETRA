@@ -2,12 +2,13 @@
   "name": "mitra",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "server": "node server/server.js",
     "client": "npm --prefix client run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm --prefix client install && npm --prefix client run build",
+    "postinstall": "npm run build",
     "start": "NODE_ENV=production node server/server.js"
   },
   "keywords": [],
